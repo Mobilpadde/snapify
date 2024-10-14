@@ -19,6 +19,8 @@ RUN \
  else echo "Lockfile not found." && exit 1; \
  fi
 
+RUN npx --yes prisma db push
+
 ##### BUILDER
 
 FROM --platform=linux/amd64 node:18-alpine3.17 AS builder
